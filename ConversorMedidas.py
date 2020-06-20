@@ -1,0 +1,8 @@
+n = float(input("Informe uma distância em metros: "))
+print("Equivale a: {:.2f} dam".format(n/10))
+print("Equivale a: {:.2f} hm".format(n/100))
+print("Equivale a: {:.2f} km".format(n/1000))
+print("////////////////////////////////")
+print("Equivale a: {:.2f} dm".format(n*10))
+print("Equivale a: {:.2f} cm".format(n*100))
+print("Equivale a: {:.2f} mm".format(n*1000))
