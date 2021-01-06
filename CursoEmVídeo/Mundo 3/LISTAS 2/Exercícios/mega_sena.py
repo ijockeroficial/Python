@@ -14,6 +14,7 @@ while y <= jogos:
             x -= 1
     if numeros not in lista:
         lista.append(numeros[:])
+        numeros.clear()
         y += 1
 
 print(lista)
