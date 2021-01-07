@@ -10,6 +10,12 @@ while valor:
     lista.append(nota_2)
     boletim.append(lista[:])
     lista.clear()
+    '''
+    Poderia ter feito:
+    média = (nota_1 + nota_2) / 2
+    lista.append([nome, [nota_1, nota_2], média])
+    É uma outra forma de fazer lista composta (lista dentro de lista)
+    '''
     continuar = str(input("Quer continuar? S/N ")).strip().upper()
     if continuar == "S":
         valor = True
