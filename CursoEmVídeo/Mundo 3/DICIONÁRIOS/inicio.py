@@ -8,5 +8,6 @@ print(filme.values())
 print(filme.keys())
 print(filme.items())
 '''
+
 for x, y in filme.items():
     print(y)
