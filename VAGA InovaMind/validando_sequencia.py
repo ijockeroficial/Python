@@ -28,5 +28,5 @@ def verificaCaractere(simb, lista, c1, c2):
     return False
 
 
-txt = str(input("Digite  () parenteses, {} chaves ou [] colchetes: ")).strip()
+txt = str(input("Digite  () parenteses, {} chaves ou [] colchetes:  ")).strip()
 validaSequencia(txt)
