@@ -8,7 +8,7 @@ def anosTrabalhando(lista):
                 anos[anos_trabalhados] += 1
             else: 
                 anos[anos_trabalhados] = 1
-    for x in sorted(anos.items(), key=itemgetter(0)):
+    for x in sorted(anos.items(), key=itemgetter(1), reverse=True):
         print(x[1])
 
 
