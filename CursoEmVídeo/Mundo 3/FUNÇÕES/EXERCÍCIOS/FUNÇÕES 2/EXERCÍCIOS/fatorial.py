@@ -17,4 +17,3 @@ def fatorial(n, show=False):
         f *= c
     return f
 print(fatorial(5, show=True))
-help(fatorial)
