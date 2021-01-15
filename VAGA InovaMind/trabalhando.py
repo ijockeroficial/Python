@@ -8,10 +8,21 @@ def anosTrabalhando(lista):
                 anos[anos_trabalhados] += 1
             else: 
                 anos[anos_trabalhados] = 1
+    teste = []
     for x in sorted(anos.items(), key=itemgetter(1), reverse=True):
-        print(x[1])
+        teste.append(x[1])
+    a = max(teste, key=int)
+    print(a)
+    lista_nova = []
+    for x in sorted(anos.items(), key=itemgetter(1), reverse=True):
+        if x[1] == a:
+            lista_nova.append(x[0])
+    print(f"Houve mais pessoas trabalhando no(s) ano(s) de: {lista_nova}")
+
+
+  
 
 
 
-lista = [[1993, 2030], [1980, 2020], [1940, 1990], [2003, 2070]]
+lista = [[1993, 2005], [1993, 2005], [1993, 2005], [2006, 2070], [2006, 2070]]
 anosTrabalhando(lista)
