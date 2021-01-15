@@ -19,10 +19,6 @@ def anosTrabalhando(lista):
             lista_nova.append(x[0])
     print(f"Houve mais pessoas trabalhando no(s) ano(s) de: {lista_nova}")
 
-
-  
-
-
-
+    
 lista = [[1993, 2005], [1993, 2005], [1993, 2005], [2006, 2070], [2006, 2070]]
 anosTrabalhando(lista)
