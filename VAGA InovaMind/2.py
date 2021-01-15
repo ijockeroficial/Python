@@ -1,30 +1,24 @@
-def anoTrabalhando(anos):
+from operator import itemgetter
+def anosTrabalhando(lista):
     print("_" * 50)
-    antes = []
-    depois = []
-    for y, z in enumerate(anos):
-        if y == 0:
-            ano_ultimo_aposentado = ano_primeiro_aposentado = z[1]
-        else:
-            if z[1] > ano_ultimo_aposentado:
-                ano_ultimo_aposentado = z[1]
-            if z[1] < ano_primeiro_aposentado:
-                ano_primeiro_aposentado = z[1]
-        metade = ano_ultimo_aposentado - (ano_ultimo_aposentado - ano_primeiro_aposentado) / 2
-    for y, z in enumerate(anos):
-        if z[1] <= metade:
-            antes.append(1)
-        else:
-            if z[1] >= metade:
-                depois.append(1)
-    if len(antes) > len(depois):
-        print(f"A maioria das pessoas trabalharam entre os anos de {ano_primeiro_aposentado} e {metade}")
-    else:
-        if len(depois) > len(antes):
-            print(f"A maioria das pessoas trabalharam entre os anos de {metade} e {ano_ultimo_aposentado}")
+    anos = {}
+    for pessoa in lista:
+        for anos_trabalhados in range(pessoa[0], pessoa[1] + 1):
+            if anos_trabalhados in anos:
+                anos[anos_trabalhados] += 1
+            else: 
+                anos[anos_trabalhados] = 1
+    teste = []
+    for x in sorted(anos.items(), key=itemgetter(1), reverse=True):
+        teste.append(x[1])
+    a = max(teste, key=int)
+    print(a)
+    lista_nova = []
+    for x in sorted(anos.items(), key=itemgetter(1), reverse=True):
+        if x[1] == a:
+            lista_nova.append(x[0])
+    print(f"Houve mais pessoas trabalhando no(s) ano(s) de: {lista_nova}")
 
-
-
-
-lista = [[1993, 2030], [2000, 2060], [1940, 1990], [1999, 2020]]
-anoTrabalhando(lista)
+    
+lista = [[1993, 2005], [1993, 2005], [1993, 2005], [2006, 2070], [2006, 2070]]
+anosTrabalhando(lista)
