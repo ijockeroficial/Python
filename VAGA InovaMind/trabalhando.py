@@ -30,7 +30,6 @@ def anosTrabalhando(lista):
             else: 
                 anos[anos_trabalhados] = 1
     maior = max(anos.items(), key=itemgetter(1))[1]
-    print(maior)
     lista_nova = []
     for x in sorted(anos.items(), key=itemgetter(1), reverse=True):
         if x[1] == maior:
