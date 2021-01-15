@@ -1,5 +1,11 @@
 def anosTrabalhando(anos):
     print("_" * 50)
+    for x, y in enumerate(anos):
+        if x == 0:
+            primeiro = y[0]
+        else:
+            if y[0] < primeiro:
+                primeiro = y[0]
 
 
 
