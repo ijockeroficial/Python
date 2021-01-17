@@ -1,0 +1,4 @@
+Joao;22
+Marcos;33
+Joao;70
+Lucas;22
