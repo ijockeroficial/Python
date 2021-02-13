@@ -1,5 +1,5 @@
 # Python
-Iniciando em Python 3 2 1
+Iniciando em Python 
 ------------------------------------
 Curso de Python do canal:
 Curso em Vídeo
