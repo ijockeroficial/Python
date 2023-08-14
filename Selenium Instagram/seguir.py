@@ -11,7 +11,7 @@ driver = webdriver.Chrome("C:/Users/Jocker/Downloads/chromedriver.exe")
 driver.implicitly_wait(30)
 driver.get('https://www.instagram.com/')
 driver.find_element_by_name("username").click()
-driver.find_element_by_name('username').send_keys('ocarinhadeti')
+driver.find_element_by_name('username').send_keys('seuinstagram')
 sleep(3)
 driver.find_element_by_name("password").click()
 driver.find_element_by_name('password').send_keys('SUA SENHA AQUI')
@@ -44,7 +44,7 @@ print("Seguiu {} pessoas".format(c))
 
 '''
 #sistema de sair da conta
-driver.find_element_by_css_selector("img[alt='Foto do perfil de ocarinhadeti']").click()
+driver.find_element_by_css_selector("img[alt='Foto do perfil de seuinstagram']").click()
 sleep(3)
 sair = driver.find_elements_by_css_selector('div[style*="height: 28px; width: 170px"]')
 sair[4].click()
